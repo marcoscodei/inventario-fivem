@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #050506;
+  --bg-glow: #1a0a0c;
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --border: #2e303a;
+  --accent: #ef4444;
+  --accent-bg: rgba(239, 68, 68, 0.1);
+  --accent-border: rgba(239, 68, 68, 0.25);
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 15px/145% var(--sans);
+  letter-spacing: 0.1px;
+  color: var(--text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 0%, var(--bg-glow) 0%, transparent 55%);
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+code {
+  font-family: var(--mono);
+}
+
+/* Scrollbar global (fallback fora dos elementos com classes webkit do Tailwind) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(239, 68, 68, 0.3);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
